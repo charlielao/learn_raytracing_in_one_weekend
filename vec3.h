@@ -33,11 +33,11 @@ public:
         return *this;
     }
 
-    vec3& operator*=(const vec3& v)
+    vec3& operator*=(double t)
     {
-        e[0] *= v.e[0];
-        e[1] *= v.e[1];
-        e[2] *= v.e[2];
+        e[0] *= t;
+        e[1] *= t;
+        e[2] *= t;
         return *this;
     }
 
@@ -53,13 +53,13 @@ public:
 
     double length_squared() const
     {
-        return e[0] * e[0] + e[1] * e[1] + e[2] * e[2]
+        return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
     }
 
 };
 using point3 = vec3;
 
-inline std::ostream& operator<<(std::ostream& pit, const vec3& v)
+inline std::ostream& operator<<(std::ostream& out, const vec3& v)
 {
     return out << v.e[0] << ' ' << v.e[1] << ' ' << v.e[2];
 }
