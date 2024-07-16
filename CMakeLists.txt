@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(raytracing_in_one_weekend main.cpp
         vec3.h
-        color.h)
+        color.h
+        ray.h)
